@@ -39,6 +39,14 @@ export default function App() {
       </main>
     );
   }
+  if (container.length === 0) {
+    return (
+      <div>
+        <h4>All Items sold</h4>
+        <button onClick={fetchdata}>Refresh</button>
+      </div>
+    );
+  }
   return (
     <main>
       <Tours container={container} removeData={removeData} />
