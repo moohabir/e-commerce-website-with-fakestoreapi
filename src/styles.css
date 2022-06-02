@@ -2,6 +2,12 @@
   font-family: sans-serif;
   text-align: center;
 }
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .image {
   height: 200px;
   width: 200px;
