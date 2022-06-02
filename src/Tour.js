@@ -6,7 +6,8 @@ export default function Tour({
   title,
   price,
   category,
-  description
+  description,
+  removeData
 }) {
   const [show, setShow] = useState(false);
   return (
@@ -24,6 +25,7 @@ export default function Tour({
           </button>
         </p>
         <p>${price}</p>
+        <button onClick={() => removeData(id)}>Buy Item</button>
       </div>
     </div>
   );

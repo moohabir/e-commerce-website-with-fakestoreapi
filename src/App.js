@@ -9,6 +9,11 @@ export default function App() {
   const [loading, setLoading] = useState(true);
   const [container, setContainer] = useState([]);
 
+  function removeData(id) {
+    const newData = container.filter((element) => element.id !== id);
+    setContainer(newData);
+  }
+
   const fetchdata = async () => {
     setLoading(true);
 
@@ -36,7 +41,7 @@ export default function App() {
   }
   return (
     <main>
-      <Tours container={container} />
+      <Tours container={container} removeData={removeData} />
     </main>
   );
 }
